@@ -88,7 +88,7 @@
 
       axios({
         method:'post',
-        url:'API/fetch_all.php'
+        url:'https://my-crud-operation.herokuapp.com/API/fetch_all.php'
       })
       .then(function(datas){
         var users={
@@ -129,7 +129,7 @@
     function add(fname,lname){
       axios({
         method:'post',
-        url:'API/add_edit.php',
+        url:'https://my-crud-operation.herokuapp.com/API/add_edit.php',
         data:{
               "function":"add",
               "firstname":fname,
@@ -153,7 +153,7 @@
     function edit(fname,lname,user_id){
       axios({
         method:'post',
-        url:'API/add_edit.php',
+        url:'https://my-crud-operation.herokuapp.com/API/add_edit.php',
         data:{
               "function":"edit",
               "firstname":fname,
@@ -173,7 +173,7 @@
     function deletePerson(user_id){
       axios({
         method:'post',
-        url:'API/delete.php',
+        url:'https://my-crud-operation.herokuapp.com/API/delete.php',
         data:{
               id:user_id
         }

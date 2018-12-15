@@ -1,4 +1,7 @@
 <?php
+  header('Access-Control-Allow-Origin: *');
+  header('Access-Control-Allow-Methods: GET, POST');
+  header("Access-Control-Allow-Headers: X-Requested-With");
   $prefix='https://';
   $domain=$_SERVER['HTTP_HOST'].'/API';
   $relative='/API.php?action=delete';
