@@ -1,6 +1,6 @@
 <?php
   $domain=$_SERVER['HTTP_HOST'].'/CRUD/API/';
-  $prefix='http://';
+  $prefix='https://';
   $relative='API.php?action=fetch_all';
   $url=$prefix.$domain.$relative;
   $ch=curl_init($url);

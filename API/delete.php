@@ -1,5 +1,5 @@
 <?php
-  $prefix='http://';
+  $prefix='https://';
   $domain=$_SERVER['HTTP_HOST'].'/CRUD/API/';
   $relative='API.php?action=delete';
   $url=$prefix.$domain.$relative;

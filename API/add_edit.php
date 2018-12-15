@@ -1,6 +1,6 @@
 <?php
 $domain=$_SERVER['HTTP_HOST'].'/CRUD/API/';
-$prefix='http://';
+$prefix='https://';
 $json=file_get_contents('php://input');
 $data=json_decode($json);
 $relative='API.php?action='.$data->function;
