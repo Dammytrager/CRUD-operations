@@ -1,7 +1,7 @@
 <?php
-  $domain=$_SERVER['HTTP_HOST'].'/CRUD/API/';
+  $domain=$_SERVER['HTTP_HOST'].'/API';
   $prefix='https://';
-  $relative='API.php?action=fetch_all';
+  $relative='/API.php?action=fetch_all';
   $url=$prefix.$domain.$relative;
   $ch=curl_init($url);
   curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);

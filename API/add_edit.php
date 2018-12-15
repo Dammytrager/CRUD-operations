@@ -1,9 +1,9 @@
 <?php
-$domain=$_SERVER['HTTP_HOST'].'/CRUD/API/';
+$domain=$_SERVER['HTTP_HOST'].'/API';
 $prefix='https://';
 $json=file_get_contents('php://input');
 $data=json_decode($json);
-$relative='API.php?action='.$data->function;
+$relative='/API.php?action='.$data->function;
 
 #edit
 if($data->function=='edit'){

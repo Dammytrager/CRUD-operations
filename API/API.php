@@ -3,8 +3,11 @@
 
     var $db='';
     function API(){
-      $this->db=mysqli_connect('localhost','root','958060623','users') or die('check your database parameters');
+      $this->db=mysqli_connect('us-cdbr-iron-east-01.cleardb.net','b7f4921f420f5e','532ec641','heroku_c47063e90ea3bda') or die('check your database parameters');
     }
+
+
+    //b7f4921f420f5e:532ec641@us-cdbr-iron-east-01.cleardb.net/heroku_c47063e90ea3bda?reconnect=true
 
     /*Load All Data from Db*/
     function fetch_all(){
