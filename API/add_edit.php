@@ -12,11 +12,12 @@ if($data->function=='edit'){
   'lastname'=>$data->lastname,
   'user_id'=>$data->user_id
   );
+
 }
 
 #add
 else{
-      $relative='API.php?action=firstname';
+      $relative='/API.php?action=firstname';
       $url=$prefix.$domain.$relative;
       $ch=curl_init($url);
       curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
@@ -27,7 +28,7 @@ else{
       #if user exists
       if(in_array($data->firstname,$response)){
 
-        $relative='API.php?action=lastname';
+        $relative='/API.php?action=lastname';
         $url=$prefix.$domain.$relative;
         $ch=curl_init($url);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
@@ -45,23 +46,21 @@ else{
       $postdata=array(
         'firstname'=>$data->firstname,
         'lastname'=>$data->lastname);
-        $relative='API.php?action='.$data->function;
-        $url=$prefix.$domain.$relative;
-        $ch=curl_init($url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-        curl_setopt($ch,CURLOPT_POST,1);
-        curl_setopt($ch,CURLOPT_POSTFIELDS,$postdata);
-        $response=curl_exec($ch);
-        curl_close($ch);
-        $response=json_decode($response);
-        $output=array('status'=>'200',
-                      'message'=>'success',
-                      'data'=>$response);
-
-        echo json_encode($output);
-
-
-
 }
+
+$relative='/API.php?action='.$data->function;
+$url=$prefix.$domain.$relative;
+$ch=curl_init($url);
+curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+curl_setopt($ch,CURLOPT_POST,1);
+curl_setopt($ch,CURLOPT_POSTFIELDS,$postdata);
+$response=curl_exec($ch);
+curl_close($ch);
+$response=json_decode($response);
+$output=array('status'=>'200',
+              'message'=>'success',
+              'data'=>$response);
+
+echo json_encode($output);
 
  ?>

@@ -1,7 +1,7 @@
 <?php
   $prefix='https://';
   $domain=$_SERVER['HTTP_HOST'].'/API';
-  $relative='API.php?action=delete';
+  $relative='/API.php?action=delete';
   $url=$prefix.$domain.$relative;
   $json=file_get_contents('php://input');
   $data=json_decode($json);
