@@ -1,6 +1,14 @@
 
+# Description
+
 Basic CRUD operations with a user interface
 
-run index.html locally to access the UI
+Enables
+* Add
+* Edit
+* Delete
 
-Internet connection is required
+# Live Demo
+
+https://my-crud-operation.herokuapp.com/
+
